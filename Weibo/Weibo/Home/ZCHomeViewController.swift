@@ -19,10 +19,14 @@ class ZCHomeViewController: ZCBaseViewController {
 //        if  !userLogin {
 //            visitorView?.setUpVisitorInfo(isHome: true, imageName: "visitordiscover_feed_image_house", message: "测试测试测试测试测试测试测试测试")
 //        }
-        
+        //初始化导航条
         setUpNav()
         
+        //注册通知，监听菜单
+        NotificationCenter.default.addObserver(self, selector: #selector(change), name: ZCPopoverAnimatorWillShow, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(change), name: ZCPopoverAnimatorWillDismiss, object: nil)
     }
+    
     
     private func setUpNav()
     {
@@ -48,7 +52,7 @@ class ZCHomeViewController: ZCBaseViewController {
     
     func titleBtnClick(btn:ZCTitleButton)
     {
-        btn.isSelected = !btn.isSelected
+//        btn.isSelected = !btn.isSelected
         
         let popover = ZCPopoverViewController()
 //        popover.transitioningDelegate = self
@@ -63,7 +67,17 @@ class ZCHomeViewController: ZCBaseViewController {
     }
     
     func rightItemClick(){
-        print(#function)
+        let qrcodeVC = ZCQRCodeViewController()
+//        qrcodeVC.title = "扫一扫"
+//        qrcodeVC.hidesBottomBarWhenPushed = true
+//        navigationController?.pushViewController(qrcodeVC, animated: true)
+        present(qrcodeVC, animated: true, completion: nil)
+    }
+    
+    //修改标题按钮的状态
+    func change(){
+        let titleBtn = navigationItem.titleView as! ZCTitleButton
+        titleBtn.isSelected = !titleBtn.isSelected
     }
   
     //MARK: --懒加载
@@ -85,6 +99,9 @@ class ZCHomeViewController: ZCBaseViewController {
         return 0
     }
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
 }
 

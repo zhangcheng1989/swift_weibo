@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+let ZCPopoverAnimatorWillShow = NSNotification.Name(rawValue:"ZCPopoverAnimatorWillShow")
+let ZCPopoverAnimatorWillDismiss = NSNotification.Name(rawValue:"ZCPopoverAnimatorWillDismiss")
+
+
 class ZCPopoverAnimator: NSObject,UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning
 {
     ///记录当前是否展开
@@ -36,6 +41,9 @@ class ZCPopoverAnimator: NSObject,UIViewControllerTransitioningDelegate,UIViewCo
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
         isPrsent = true
+        
+        NotificationCenter.default.post(name: ZCPopoverAnimatorWillShow, object: self)
+        
         return self
     }
     
@@ -47,6 +55,7 @@ class ZCPopoverAnimator: NSObject,UIViewControllerTransitioningDelegate,UIViewCo
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
         isPrsent = false
+        NotificationCenter.default.post(name: ZCPopoverAnimatorWillDismiss, object: self)
         return self
     }
     

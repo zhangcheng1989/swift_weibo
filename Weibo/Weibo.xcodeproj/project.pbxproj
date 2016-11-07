@@ -23,6 +23,8 @@
 		056197A11DCF7E6900FADED1 /* ZCPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561979F1DCF7E6900FADED1 /* ZCPopoverViewController.xib */; };
 		056197A51DD04CC600FADED1 /* ZCPopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056197A41DD04CC600FADED1 /* ZCPopoverPresentationController.swift */; };
 		0568201A1DD073C9003A829C /* ZCPopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056820191DD073C9003A829C /* ZCPopoverAnimator.swift */; };
+		0568201E1DD0805C003A829C /* ZCQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0568201C1DD0805C003A829C /* ZCQRCodeViewController.swift */; };
+		0568201F1DD0805C003A829C /* ZCQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0568201D1DD0805C003A829C /* ZCQRCodeViewController.xib */; };
 		058AD2C21DCE2AEB00C8850D /* ZCVisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058AD2C11DCE2AEB00C8850D /* ZCVisitorView.xib */; };
 		05A9A85C1DCC536100BDEC83 /* MianVCSetting.json in Resources */ = {isa = PBXBuildFile; fileRef = 05A9A85B1DCC536100BDEC83 /* MianVCSetting.json */; };
 		05A9A85E1DCC646300BDEC83 /* ZCAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A9A85D1DCC646300BDEC83 /* ZCAddViewController.swift */; };
@@ -70,6 +72,8 @@
 		0561979F1DCF7E6900FADED1 /* ZCPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZCPopoverViewController.xib; sourceTree = "<group>"; };
 		056197A41DD04CC600FADED1 /* ZCPopoverPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCPopoverPresentationController.swift; sourceTree = "<group>"; };
 		056820191DD073C9003A829C /* ZCPopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCPopoverAnimator.swift; sourceTree = "<group>"; };
+		0568201C1DD0805C003A829C /* ZCQRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCQRCodeViewController.swift; sourceTree = "<group>"; };
+		0568201D1DD0805C003A829C /* ZCQRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZCQRCodeViewController.xib; sourceTree = "<group>"; };
 		058AD2C11DCE2AEB00C8850D /* ZCVisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZCVisitorView.xib; sourceTree = "<group>"; };
 		05A9A85B1DCC536100BDEC83 /* MianVCSetting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MianVCSetting.json; sourceTree = "<group>"; };
 		05A9A85D1DCC646300BDEC83 /* ZCAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCAddViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 		052405B71DCB26500006605D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0568201B1DD08047003A829C /* QRCode */,
 				0561979D1DCF7E3900FADED1 /* Popover */,
 				052405BA1DCB270C0006605D /* ZCHomeViewController.swift */,
 			);
@@ -228,6 +233,15 @@
 				056820191DD073C9003A829C /* ZCPopoverAnimator.swift */,
 			);
 			path = Popover;
+			sourceTree = "<group>";
+		};
+		0568201B1DD08047003A829C /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				0568201C1DD0805C003A829C /* ZCQRCodeViewController.swift */,
+				0568201D1DD0805C003A829C /* ZCQRCodeViewController.xib */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		05A9A8581DCC361800BDEC83 /* Resouces */ = {
@@ -348,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05A9A85C1DCC536100BDEC83 /* MianVCSetting.json in Resources */,
+				0568201F1DD0805C003A829C /* ZCQRCodeViewController.xib in Resources */,
 				058AD2C21DCE2AEB00C8850D /* ZCVisitorView.xib in Resources */,
 				0550FC1C1DCB109100355D30 /* Assets.xcassets in Resources */,
 				056197A11DCF7E6900FADED1 /* ZCPopoverViewController.xib in Resources */,
@@ -376,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0568201A1DD073C9003A829C /* ZCPopoverAnimator.swift in Sources */,
+				0568201E1DD0805C003A829C /* ZCQRCodeViewController.swift in Sources */,
 				052405B91DCB26ED0006605D /* ZCTabBarController.swift in Sources */,
 				05A9A85E1DCC646300BDEC83 /* ZCAddViewController.swift in Sources */,
 				052405BB1DCB270C0006605D /* ZCHomeViewController.swift in Sources */,
