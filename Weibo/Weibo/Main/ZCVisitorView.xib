@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZCVisitorView" customModule="Weibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="TV1-3e-mFy">
+                    <rect key="frame" x="100" y="246" width="175" height="175"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_mask_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="3am-Ec-d0t">
+                    <rect key="frame" x="0.0" y="379" width="375" height="288"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_house" translatesAutoresizingMaskIntoConstraints="NO" id="NdU-jY-Po8">
+                    <rect key="frame" x="141" y="289" width="94" height="90"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快来注册快来注册快来注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BM-Ke-qxf">
+                    <rect key="frame" x="83" y="431" width="208" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFI-VG-fei">
+                    <rect key="frame" x="80" y="472" width="100" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="ZKf-5t-kUo"/>
+                    </constraints>
+                    <state key="normal" title="注册" backgroundImage="common_button_white_disable">
+                        <color key="titleColor" red="1" green="0.40614543269999998" blue="0.045221810520000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="registerClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="0NE-zy-hPs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4U-fN-G6c">
+                    <rect key="frame" x="195" y="472" width="100" height="35"/>
+                    <state key="normal" title="登录" backgroundImage="common_button_white_disable">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="loginClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="hrN-6k-qrW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="TV1-3e-mFy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3jW-6Q-yoq"/>
+                <constraint firstItem="3am-Ec-d0t" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4of-fd-HAz"/>
+                <constraint firstItem="9BM-Ke-qxf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="A17-FN-bSt"/>
+                <constraint firstItem="fFI-VG-fei" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="80" id="AhS-f5-U2K"/>
+                <constraint firstAttribute="trailing" secondItem="g4U-fN-G6c" secondAttribute="trailing" constant="80" id="BKb-Mw-7XR"/>
+                <constraint firstItem="g4U-fN-G6c" firstAttribute="width" secondItem="fFI-VG-fei" secondAttribute="width" id="JSZ-ui-BiZ"/>
+                <constraint firstItem="g4U-fN-G6c" firstAttribute="top" secondItem="fFI-VG-fei" secondAttribute="top" id="P86-TF-uFP"/>
+                <constraint firstItem="NdU-jY-Po8" firstAttribute="centerY" secondItem="TV1-3e-mFy" secondAttribute="centerY" id="Shm-bH-ys4"/>
+                <constraint firstItem="3am-Ec-d0t" firstAttribute="top" secondItem="NdU-jY-Po8" secondAttribute="bottom" id="TJq-ag-zEB"/>
+                <constraint firstAttribute="trailing" secondItem="3am-Ec-d0t" secondAttribute="trailing" id="bGK-mR-Rar"/>
+                <constraint firstItem="NdU-jY-Po8" firstAttribute="centerX" secondItem="TV1-3e-mFy" secondAttribute="centerX" id="bnQ-oJ-V2x"/>
+                <constraint firstItem="TV1-3e-mFy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ehL-Z2-HMq"/>
+                <constraint firstItem="9BM-Ke-qxf" firstAttribute="top" secondItem="TV1-3e-mFy" secondAttribute="bottom" constant="10" id="fdJ-Sc-d2z"/>
+                <constraint firstItem="fFI-VG-fei" firstAttribute="top" secondItem="9BM-Ke-qxf" secondAttribute="bottom" constant="20" id="h1Q-Ie-bOf"/>
+                <constraint firstAttribute="bottom" secondItem="3am-Ec-d0t" secondAttribute="bottom" id="w8B-bB-JD0"/>
+            </constraints>
+            <connections>
+                <outlet property="img_house" destination="NdU-jY-Po8" id="JEa-qH-Lza"/>
+                <outlet property="img_smallicon" destination="TV1-3e-mFy" id="kdX-8N-B5Y"/>
+                <outlet property="lb_message" destination="9BM-Ke-qxf" id="zj2-Ht-zgy"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common_button_white_disable" width="11" height="35"/>
+        <image name="visitordiscover_feed_image_house" width="94" height="90"/>
+        <image name="visitordiscover_feed_image_smallicon" width="175" height="175"/>
+        <image name="visitordiscover_feed_mask_smallicon" width="175" height="175"/>
+    </resources>
+</document>

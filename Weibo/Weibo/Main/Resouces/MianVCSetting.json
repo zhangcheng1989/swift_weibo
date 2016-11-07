@@ -1,0 +1,28 @@
+[
+ {
+    "vcName": "ZCHomeViewController",
+    "title": "首页",
+    "imageName": "tabbar_home"
+ },
+ {
+ "vcName": "ZCMessageViewController",
+ "title": "消息",
+ "imageName": "tabbar_message_center"
+ },
+ {
+ "vcName": "ZCAddViewController",
+ "title": "",
+ "imageName": ""
+ },
+ {
+ "vcName": "ZCDiscoverViewController",
+ "title": "发现",
+ "imageName": "tabbar_discover"
+ },
+ {
+ "vcName": "ZCProfileViewController",
+ "title": "我",
+ "imageName": "tabbar_profile"
+ }
+]
+ 
